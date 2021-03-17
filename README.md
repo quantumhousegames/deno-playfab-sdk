@@ -1,6 +1,6 @@
 # PlayFab SDK for Deno
 
-A collection of API modules, written in TypeScipt, designed for use with [Deno](https://deno.land). All the modules at the root are auto generated and based on the [API Specs](https://github.com/PlayFab/API_Specs/tree/master/Swagger/PlayFab) Provided by PlayFab. Each module exposes its related models as TypeScript interfaces, and all API operations are exposed as functions which return promises.
+A collection of API modules, written in TypeScript, designed for use with [Deno](https://deno.land). All the modules at the root are auto generated and based on the [API Specs](https://github.com/PlayFab/API_Specs/tree/master/Swagger/PlayFab) Provided by PlayFab. Each module exposes its related models as TypeScript interfaces, and all API operations are exposed as functions which return promises.
 
 ## Example
 
