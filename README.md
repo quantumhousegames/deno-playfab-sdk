@@ -7,7 +7,7 @@ A collection of API modules, written in TypeScipt, designed for use with [Deno](
 Let's say we wanted to use the [Add News feature of Title-Wide Data Manangement](https://docs.microsoft.com/en-us/rest/api/playfab/admin/title-wide-data-management/addnews?view=playfab-rest). We'd write the following code:
 
 ```typescript
-import { AddNews } from "deno.land/x/playfab-sdk@VERSION/admin.ts";
+import { AddNews } from "deno.land/x/playfab_sdk@VERSION/admin.ts";
 
 const request = {
   Title: "My news title",
@@ -30,22 +30,22 @@ TIP: Always use a pinned version to ensure APIs don't change unexpectedly on you
 
 Each module comes with extensive focused documentation:
 
-* [Admin](https://doc.deno.land/https/deno.land/x/playfab-sdk/admin.ts)
-* [Authentication](https://doc.deno.land/https/deno.land/x/playfab-sdk/authentication.ts)
-* [Client](https://doc.deno.land/https/deno.land/x/playfab-sdk/client.ts)
-* [CloudScript](https://doc.deno.land/https/deno.land/x/playfab-sdk/cloudscript.ts)
-* [Data](https://doc.deno.land/https/deno.land/x/playfab-sdk/data.ts)
-* [Economy](https://doc.deno.land/https/deno.land/x/playfab-sdk/economy.ts)
-* [Events](https://doc.deno.land/https/deno.land/x/playfab-sdk/client.ts)
-* [Experimentation](https://doc.deno.land/https/deno.land/x/playfab-sdk/experimentation.ts)
-* [Groups](https://doc.deno.land/https/deno.land/x/playfab-sdk/groups.ts)
-* [Insights](https://doc.deno.land/https/deno.land/x/playfab-sdk/insights.ts)
-* [Leaderboards](https://doc.deno.land/https/deno.land/x/playfab-sdk/leaderboards.ts)
-* [Localization](https://doc.deno.land/https/deno.land/x/playfab-sdk/localization.ts)
-* [Matchmaker](https://doc.deno.land/https/deno.land/x/playfab-sdk/matchmaker.ts)
-* [Multiplayer](https://doc.deno.land/https/deno.land/x/playfab-sdk/multiplayer.ts)
-* [Profiles](https://doc.deno.land/https/deno.land/x/playfab-sdk/profiles.ts)
-* [Server](https://doc.deno.land/https/deno.land/x/playfab-sdk/server.ts)
+* [Admin](https://doc.deno.land/https/deno.land/x/playfab_sdk/admin.ts)
+* [Authentication](https://doc.deno.land/https/deno.land/x/playfab_sdk/authentication.ts)
+* [Client](https://doc.deno.land/https/deno.land/x/playfab_sdk/client.ts)
+* [CloudScript](https://doc.deno.land/https/deno.land/x/playfab_sdk/cloudscript.ts)
+* [Data](https://doc.deno.land/https/deno.land/x/playfab_sdk/data.ts)
+* [Economy](https://doc.deno.land/https/deno.land/x/playfab_sdk/economy.ts)
+* [Events](https://doc.deno.land/https/deno.land/x/playfab_sdk/client.ts)
+* [Experimentation](https://doc.deno.land/https/deno.land/x/playfab_sdk/experimentation.ts)
+* [Groups](https://doc.deno.land/https/deno.land/x/playfab_sdk/groups.ts)
+* [Insights](https://doc.deno.land/https/deno.land/x/playfab_sdk/insights.ts)
+* [Leaderboards](https://doc.deno.land/https/deno.land/x/playfab_sdk/leaderboards.ts)
+* [Localization](https://doc.deno.land/https/deno.land/x/playfab_sdk/localization.ts)
+* [Matchmaker](https://doc.deno.land/https/deno.land/x/playfab_sdk/matchmaker.ts)
+* [Multiplayer](https://doc.deno.land/https/deno.land/x/playfab_sdk/multiplayer.ts)
+* [Profiles](https://doc.deno.land/https/deno.land/x/playfab_sdk/profiles.ts)
+* [Server](https://doc.deno.land/https/deno.land/x/playfab_sdk/server.ts)
 
 ## Updating the Generated APIs
 
