@@ -1,0 +1,3 @@
+[submodule "API_Specs"]
+	path = specs
+	url = https://github.com/PlayFab/API_Specs
