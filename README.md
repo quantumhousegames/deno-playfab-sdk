@@ -7,7 +7,7 @@ A collection of API modules, written in TypeScript, designed for use with [Deno]
 Let's say we wanted to use the [Add News feature of Title-Wide Data Manangement](https://docs.microsoft.com/en-us/rest/api/playfab/admin/title-wide-data-management/addnews?view=playfab-rest). We'd write the following code:
 
 ```typescript
-import { AddNews } from "deno.land/x/playfab_sdk@VERSION/admin.ts";
+import { AddNews } from "https://deno.land/x/playfab_sdk@VERSION/admin.ts";
 
 const request = {
   Title: "My news title",
