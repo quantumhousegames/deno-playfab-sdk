@@ -1,22 +1,22 @@
 /** All responses from PlayFab have these keys at a minimum. */
 export interface RawResponse {
-  // Numerical HTTP response code.
+  /** Numerical HTTP response code. */
   code: number;
-  // String HTTP repsonse code.
+  /** String HTTP repsonse code. */
   status?: string;
-  // Optional data payload.
+  /** Optional data payload. */
   data?: Record<string, unknown>;
 }
 
 /** The structure of any API error message from PlayFab. */
 export interface PlayFabError extends Omit<RawResponse, "data"> {
-  // Numerical PlayFab error code.
+  /** Numerical PlayFab error code. */
   errorCode: number;
-  // PlayFab error code.
+  /** PlayFab error code. */
   error?: string;
-  // Detailed description of individual issues with the request object.
+  /** Detailed description of individual issues with the request object. */
   errorDetails?: Record<string, unknown>;
-  // Error message summary.
+  /** Error message summary. */
   errorMessage?: string;
 }
 
@@ -54,9 +54,9 @@ export type SecurityOptions = SecretKey | SessionTicket | EntityToken;
 
 /** Options that may be specified for a request. */
 export interface RequestOptions {
-  // The PlayFab title identifier.
+  /** The PlayFab title identifier to execute the API request on behalf of. */
   titleId: string;
-  // Optional security option specification.
+  /** Optional security option specification. */
   security?: SecurityOptions;
 }
 
@@ -106,10 +106,6 @@ export function setDebugMode(state: boolean): void {
   debugMode = state;
 }
 
-function urlFor(path: string, titleId: string): string {
-  return `https://${titleId}.playfabapi.com${path}`;
-}
-
 /** Exposed for testing. */
 export function setSecurityHeader(
   headers: Headers,
@@ -132,6 +128,10 @@ export function setSecurityHeader(
   }
 
   return false;
+}
+
+function urlFor(path: string, titleId: string): string {
+  return `https://${titleId}.playfabapi.com${path}`;
 }
 
 function instanceOfSecretKey(options: SecurityOptions): options is SecretKey {
