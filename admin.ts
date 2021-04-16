@@ -1625,7 +1625,7 @@ export enum GenericErrorCodes {
   EvaluationModePlayerCountExceeded = "EvaluationModePlayerCountExceeded",
   GetPlayersInSegmentRateLimitExceeded = "GetPlayersInSegmentRateLimitExceeded",
   CloudScriptFunctionNameSizeExceeded = "CloudScriptFunctionNameSizeExceeded",
-  InsightsManagementTitleInEvaluationMode = "InsightsManagementTitleInEvaluationMode",
+  PaidInsightsFeaturesNotEnabled = "PaidInsightsFeaturesNotEnabled",
   CloudScriptAzureFunctionsQueueRequestError = "CloudScriptAzureFunctionsQueueRequestError",
   EvaluationModeTitleCountExceeded = "EvaluationModeTitleCountExceeded",
   InsightsManagementTitleNotInFlight = "InsightsManagementTitleNotInFlight",
@@ -1764,6 +1764,7 @@ export enum GenericErrorCodes {
   CreateSegmentRateLimitExceeded = "CreateSegmentRateLimitExceeded",
   UpdateSegmentRateLimitExceeded = "UpdateSegmentRateLimitExceeded",
   GetSegmentsRateLimitExceeded = "GetSegmentsRateLimitExceeded",
+  AsyncExportNotInFlight = "AsyncExportNotInFlight",
   SnapshotNotFound = "SnapshotNotFound",
   InventoryApiNotImplemented = "InventoryApiNotImplemented",
 }

@@ -145,10 +145,6 @@ export interface BuildAliasDetailsResponse {
   AliasName?: string;
   /** Array of build selection criteria. */
   BuildSelectionCriteria?: BuildSelectionCriterion[];
-  /** The page size on the response. */
-  PageSize: number;
-  /** The skip token for the paged response. */
-  SkipToken?: string;
 }
 
 export interface BuildAliasParams {
@@ -1003,6 +999,8 @@ export interface GetMultiplayerServerDetailsRequest {
 }
 
 export interface GetMultiplayerServerDetailsResponse {
+  /** The identity of the build in which the server was allocated. */
+  BuildId?: string;
   /** The connected players in the multiplayer server. */
   ConnectedPlayers?: ConnectedPlayer[];
   /** The fully qualified domain name of the virtual machine that is hosting this multiplayer server. */
@@ -1234,9 +1232,23 @@ export interface ListAssetSummariesResponse {
   SkipToken?: string;
 }
 
-export interface ListBuildAliasesForTitleResponse {
+/** Returns a list of summarized details of all multiplayer server builds for a title. */
+export interface ListBuildAliasesRequest {
+  /** The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.). */
+  CustomTags?: Record<string, unknown>;
+  /** The page size for the request. */
+  PageSize?: number;
+  /** The skip token for the paged request. */
+  SkipToken?: string;
+}
+
+export interface ListBuildAliasesResponse {
   /** The list of build aliases for the title */
   BuildAliases?: BuildAliasDetailsResponse[];
+  /** The page size on the response. */
+  PageSize: number;
+  /** The skip token for the paged response. */
+  SkipToken?: string;
 }
 
 /** Returns a list of summarized details of all multiplayer server builds for a title. */
@@ -1535,12 +1547,6 @@ export interface MatchTotalRuleExpansion {
   SecondsBetweenExpansions: number;
 }
 
-/** Returns a list of summarized details of all multiplayer server builds for a title. */
-export interface MultiplayerEmptyRequest {
-  /** The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.). */
-  CustomTags?: Record<string, unknown>;
-}
-
 export interface MultiplayerServerSummary {
   /** The connected players in the multiplayer server. */
   ConnectedPlayers?: ConnectedPlayer[];
@@ -1664,6 +1670,8 @@ export interface RequestMultiplayerServerRequest {
 }
 
 export interface RequestMultiplayerServerResponse {
+  /** The identity of the build in which the server was allocated. */
+  BuildId?: string;
   /** The connected players in the multiplayer server. */
   ConnectedPlayers?: ConnectedPlayer[];
   /** The fully qualified domain name of the virtual machine that is hosting this multiplayer server. */
@@ -1724,6 +1732,8 @@ export interface ScheduledStandbySettings {
 }
 
 export interface ServerDetails {
+  /** The fully qualified domain name of the virtual machine that is hosting this multiplayer server. */
+  Fqdn?: string;
   /** The IPv4 address of the virtual machine that is hosting this multiplayer server. */
   IPV4Address?: string;
   /** The ports the multiplayer server uses. */
@@ -2706,15 +2716,15 @@ export function ListAssetSummaries(
 
 /**
  * Lists details of all build aliases for a title. Accepts tokens for title and if game client access is enabled, allows game client to request list of builds with player entity token.
- * @param {MultiplayerEmptyRequest} request
+ * @param {ListBuildAliasesRequest} request
  * @param {RequestOptions} options
- * @returns {Promise<ListBuildAliasesForTitleResponse>}
+ * @returns {Promise<ListBuildAliasesResponse>}
  */ 
 export function ListBuildAliases(
-  request: MultiplayerEmptyRequest,
+  request: ListBuildAliasesRequest,
   options: RequestOptions
-): Promise<ListBuildAliasesForTitleResponse> {
-  return dispatchRequest<ListBuildAliasesForTitleResponse>(
+): Promise<ListBuildAliasesResponse> {
+  return dispatchRequest<ListBuildAliasesResponse>(
     "/MultiplayerServer/ListBuildAliases",
     request,
     options
