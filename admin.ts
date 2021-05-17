@@ -1728,6 +1728,7 @@ export enum GenericErrorCodes {
   TitleNotEnabledForParty = "TitleNotEnabledForParty",
   PartyVersionNotFound = "PartyVersionNotFound",
   MultiplayerServerBuildReferencedByMatchmakingQueue = "MultiplayerServerBuildReferencedByMatchmakingQueue",
+  MultiplayerServerBuildReferencedByBuildAlias = "MultiplayerServerBuildReferencedByBuildAlias",
   ExperimentationExperimentStopped = "ExperimentationExperimentStopped",
   ExperimentationExperimentRunning = "ExperimentationExperimentRunning",
   ExperimentationExperimentNotFound = "ExperimentationExperimentNotFound",
